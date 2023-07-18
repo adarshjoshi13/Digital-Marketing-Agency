@@ -1,0 +1,71 @@
+/* Nav section */
+#navbar{
+    justify-content: space-around;
+}
+
+
+/* video Heading section */
+#background{
+    width: 1096px;
+}
+
+/* Our Best Services */
+
+.bfservices{
+    flex-wrap: wrap;
+}
+
+#services-contianer .services, #services-contianer .services2{
+    flex-wrap: wrap;
+}
+
+.bfservices .services .box, .bfservices .services2 .box{
+    height: 300px;
+    width: 600px;
+
+}
+
+/* Industeries We Serve*/
+
+
+#indus-we-serve .indus{
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* How We Work */
+
+
+#design4 .container{
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#design4 .container .box1{
+    margin: 10px;
+}
+
+/* Contact Us */
+
+#Content-3{
+    flex-direction: column;
+    background-size: 100% 100%;
+}
+
+#Content-3 .fill-form{
+    margin: 10px;
+}
+
+#Content-3 .map{
+    margin: 10px;
+}
+
+/* Utility Classes */
+
+.h-primary{
+    font-size: 2.2rem;
+}
+
+.h-secondary{
+    font-size: 1.6rem;
+}

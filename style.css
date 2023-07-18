@@ -1,0 +1,461 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.center{
+    text-align: center;
+}
+
+.h-primary{
+    font-size: 2.8rem;
+    padding: 20px;
+}
+
+.h-secondary{
+    font-size: 1.7rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#navbar #logo {
+    margin-left: 40px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar .sections {
+    display: flex;
+    margin-right: 40px;
+}
+
+#navbar .sections li {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#navbar .sections a {
+    font-weight: 10;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: gray;
+}
+
+#navbar .sections a:hover{
+    color: rgb(224, 195, 195);
+}
+
+#navbar .bars{
+    font-size: 1.3rem;
+    color: gray;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width: 1100px){
+    #navbar .sections{
+        display: none;
+    }
+
+    #navbar .bars{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+
+    }
+
+}
+
+.dropdown-menu{
+    position: absolute;
+    right: 2px;
+    top: 65px;
+    height: 0px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    display: none;
+    border-radius: 7.5px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu open{
+    height: 300px;
+}
+
+.dropdown-menu li{
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+
+#background .background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#background .bg-content{
+    position: absolute;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bg-content{
+    width: 589px;
+    color: white;
+    position: relative;
+    left: 50px;
+
+}
+
+.bg-content h2{
+    font-weight: 800;
+}
+
+.bg-content p{
+    font-size: 1.1rem;
+    margin: 20px;
+}
+
+.bg-content .btn, .our-services .btn{
+    margin: 20px;
+    width: 160px;
+    height: 60px;
+    border-radius: 7.5px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #89375F;
+    box-shadow: 0px 0px 0px 0px #89375F;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.bg-content .btn:hover,.our-services .btn:hover{
+    background-color: black;   
+}
+
+#services-contianer{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://arrowbitinfosoft.com/wp-content/uploads/2020/06/blob-grad.svg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#services-contianer .our-services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6px;
+    width: 790px;
+}
+
+.our-services p{
+    font-size: 1.3rem;
+    line-height: 27px;
+    word-spacing: 3px;
+}
+
+#services-contianer .services, #services-contianer .services2{
+    margin: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.services .box, .services2 .box{
+    margin: 20px;
+    height: 274px;
+    width: 370px;
+    padding: 20px;
+    box-shadow: 10px 40px 120px -40px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s;
+}
+
+.services .box:hover, .services2 .box:hover{
+    box-shadow: 10px 40px 120px 30px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s;
+}
+
+.services img, .services2 img{
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.services p, .services2 p{
+    padding-top: 10px;
+    word-spacing: 3px;
+}
+
+#indus-we-serve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#indus-we-serve .indus-con{
+    padding: 20px;
+    width: 820px;
+}
+
+#indus-we-serve .indus-con p{
+    font-size: 1.3rem;
+    line-height: 35px;
+    word-spacing: 3px;
+}
+
+#indus-we-serve .industeries{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.industeries .indus{
+    display: flex;
+    justify-content:center ;
+    width: 100%;
+}
+
+.industeries .box{
+    border: 1px solid gray;
+    border-radius: 7.5px;
+    margin: 5px;
+    padding: 10px 0px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.industeries .box img{
+    height: 120px;
+}
+
+.industeries .box h2{
+    font-size: 1.4rem;
+    margin: 5px;
+}
+
+
+#design4{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #design4 .container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .container .box1{
+    border: 1px solid gray;
+    width: 270px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  } 
+  
+  .box1 img{
+      width: 100px;
+      height: 100px;
+      color: yellow;
+      transform: rotateY(0deg);
+      transition: all 1s ease-in-out;
+  }
+  
+  .box1 h3{
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin: 30px 0px 0px;
+      color: #434343;
+  }
+  
+  .box1 p{
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 24px;
+      color: #434343;
+      margin-bottom: 60px;
+      font-weight: normal;
+      text-align: center;
+  }
+  
+  .box1 a{
+      border: 3px solid #434343;
+      border-radius: 6px;
+      color: #434343;
+      font-size: 16px;
+      font-weight: normal;
+      padding: 17px 30px;
+      letter-spacing: 1px;
+      position: relative;
+      transition: all 0.5s;
+      text-decoration: none;
+  }
+  
+  .box1 a::before {
+      background: hsl(45 100% 70%);
+      content: "";
+      inset: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease-in-out;
+      z-index: -1;
+    }
+  
+    a:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  
+  .box1:hover img{
+      color: yellow;
+      transform: rotateY(-180deg);
+  }
+  
+  .box1:hover h3{
+      color: orange;
+  }
+
+
+
+#Content-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imgs/bgbg.avif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 650px;
+}
+
+#Content-3 .fill-form{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 3px;
+    height: 450px;
+    width: 600px;
+}
+
+.fill-form .form .heading{
+    width: 340px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.fill-form .form .heading span{
+    color: #ff565b;
+}
+
+.fill-form .form input{
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 200px;
+    color: rgb(44 39 39 / 76%);
+    padding: 4px 15px;
+    margin: 6px;
+    border-radius: 5px;
+}
+
+.fill-form .form .formline3 input{
+    height: 100px;
+    width: 455px;
+}
+
+.fill-form .form .submit input{
+    background-color: #ff565b;
+    border: none;
+    color: white;
+    font-size: small;
+    height: 40px;
+    width: 490px;
+    cursor: pointer;
+    border-radius: 7.5px;
+    transition: all 0.5s;
+} 
+
+.form .submit input:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
